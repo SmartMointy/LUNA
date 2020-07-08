@@ -1,19 +1,3 @@
-<!--
-*** Thanks for checking out this README Template. If you have a suggestion that would
-*** make this better, please fork the repo and create a pull request or simply open
-*** an issue with the tag "enhancement".
-*** Thanks again! Now go create something AMAZING! :D
--->
-
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
@@ -26,14 +10,14 @@
   <p align="center">  
     An jumpstart for your next project!
     <br />
-    <a href="https://github.com/SmartMointy/small-mvc-framework"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/SmartMointy/Luna/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/SmartMointy/small-mvc-framework">View Demo</a>
+    <a href="https://github.com/SmartMointy/LUNA/wiki">View Demo</a>
     ·
-    <a href="https://github.com/SmartMointy/small-mvc-framework/issues">Report Bug</a>
+    <a href="https://github.com/SmartMointy/LUNA/issues">Report Bug</a>
     ·
-    <a href="https://github.com/SmartMointy/small-mvc-framework/issues">Request Feature</a>
+    <a href="https://github.com/SmartMointy/LUNA/issues">Request Feature</a>
     <br />
 
   </p>
@@ -99,7 +83,7 @@ First of all you need just a basic web dev envoirement. I can recommend to use v
 1. Create a dir for your project
 2. Clone the repo
 ```sh
-git clone https://github.com/SmartMointy/small-mvc-framework
+git clone https://github.com/SmartMointy/LUNA
 ```
 3. Set the root directory of the webserver to the src/public_html/ folder
 4. Change the database settings in the src/app/configs/database.ini.php to match your local database settings
@@ -110,7 +94,7 @@ git clone https://github.com/SmartMointy/small-mvc-framework
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+See the [open issues](https://github.com/SmartMointy/LUNA/issues) for a list of proposed features (and known issues).
 
 
 
@@ -139,7 +123,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Twitter: [@SmartMointy](https://twitter.com/SmartMointy) 
 
-Project Link: [https://github.com/SmartMointy/small-mvc-framework](https://github.com/SmartMointy/small-mvc-framework)
+Project Link: [https://github.com/SmartMointy/LUNA](https://github.com/SmartMointy/LUNA/)
 
 
 <!-- ACKNOWLEDGEMENTS -->
