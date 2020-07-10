@@ -48,16 +48,16 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-There are already some php frameworks that are very handy to make web developement easier, however none of them is as leightweight and fast as LUNA. It's small size make it possible to use it in very small projects, while still having the option to expand it's capabilities and use it in large projects.
+There are quite a few good php frameworks that make it easier to create large web applications, however they all suffer from the same problem. They are made for nearly every purpose, so they come with a lot of unneeded extras. LUNA's simplicity and small size make it a leightweight and fast framework that can be used in even very small projects, while still having the option to expand it's capabilities for large projects.
 
 Also LUNA can be used with frontend frameworks like React, etc. where the frontend framework is the "view" component of the Model-View-Controller pattern.
 
-Someone might say that you should use php for your next project, but a lot of developer forget how powerfull php is. Remember that php is exclusively made for web applications and still a fast and widely used language. 
+Someone might say that you should not use php for your next project, but a lot of developer forget how powerfull php is. Remember that php is exclusively made for web applications and still a fast and widely used language. 
 
-Why should I use this framework?
-* To create fast and leightweight web applications with a modern structure
-* To profit from the MVC pattern in small projects without the need of starting from scratch 
-* To expand it capabilities and use it in a much bigger scale
+Why should I use this framework? Because
+* ... it is fast and leightweight  
+* ... you don't need to start from scratch for your next project
+* ... it is simplistic and expandable
 
 Be aware that LUNA is under active developement and can/will change a lot in the future. What is currently missing is that you should be able to remove unused "modules" to improve performance even further and minimize the size. This will be done by making those modules indepentend from each other.
 
