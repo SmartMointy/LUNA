@@ -54,9 +54,9 @@ Also LUNA can be used with frontend frameworks like React, etc. where the fronte
 
 Someone might say that you should not use php for your next project, but a lot of developer forget how powerfull php is. Remember that php is exclusively made for web applications and still a fast and widely used language. 
 
-Why should I use this framework? Because
+Why should you use LUNA for your next project? Because
 * ... it is fast and leightweight  
-* ... you don't need to start from scratch for your next project
+* ... you don't need to start from scratch everytime
 * ... it is simplistic and expandable
 
 Be aware that LUNA is under active developement and can/will change a lot in the future. What is currently missing is that you should be able to remove unused "modules" to improve performance even further and minimize the size. This will be done by making those modules indepentend from each other.
