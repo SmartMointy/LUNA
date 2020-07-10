@@ -9,7 +9,7 @@ return array(
         'default' => 'default_icon_path',
         'safari' => 'safari_icon_path'
     ],
-    'version' => '0.1.0',
+    'version' => '0.4.0',
     'mode' => 'developement',
     'language' => 'de',
     'all_languages' => ['de', 'en', 'fr', 'tr'],

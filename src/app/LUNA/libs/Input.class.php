@@ -1,4 +1,4 @@
-<?php
+<?php namespace LUNA\libs;
 
 class Input
 {
@@ -25,16 +25,18 @@ class Input
         if(isset($_POST[$item]))
         {
             // return input
-            return $_POST[$item];
+            return escape($_POST[$item]);
         } else if(isset($_GET[$item])) {
             // same for GET method
-            return $_GET[$item];
+            return escape($_GET[$item]);
         }
 
         // else return empty string
         return '';
     }
 
+    public static function escape($string)
+    {
+        return htmlentities($string, ENT_QUOTES, 'UTF-8');
+    }
 }
-
-?>

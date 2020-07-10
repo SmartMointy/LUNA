@@ -1,4 +1,4 @@
-<?php
+<?php namespace LUNA\core;
 
 //Database class that adds some functionality to query the db more easily
 

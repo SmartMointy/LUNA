@@ -1,4 +1,4 @@
-<?php
+<?php namespace LUNA\core;
 
 class Controller
 {
@@ -11,5 +11,11 @@ class Controller
     protected function view($view, $data = [])
     {
         require ROOT . '/app/views/' . $view . '.view.php';
+    }
+
+    protected function helper($helper){
+
+        include ROOT . '/app/LUNA/helpers/' . $helper . '.helper.php';
+
     }
 }

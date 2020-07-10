@@ -23,7 +23,7 @@
   </p>
 </p>
 <p align="center">
-    <img src="https://img.shields.io/badge/release-v2.7.9-blue">
+    <img src="https://img.shields.io/badge/release-v0.4.0-blue">
     <img src="https://img.shields.io/badge/PHP-v7.4.1-green">
     <img src="https://img.shields.io/badge/license-MIT-lightgrey">
 </p>

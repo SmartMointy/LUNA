@@ -1,4 +1,4 @@
-<?php
+<?php namespace LUNA\libs;
 
 class Session
 {

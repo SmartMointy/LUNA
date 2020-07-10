@@ -1,4 +1,4 @@
-<?php
+<?php namespace LUNA\core;
 
 class Router
 {
@@ -14,7 +14,7 @@ class Router
 
         if (empty($url)) {
             // redirect to default page if url empty
-            Redirect::to(Language::Message('MENU_HOME'));
+            header('Location: ' . Language::Message('MENU_HOME'));
         }
 
         //put hole url in session for login redirect
