@@ -25,7 +25,7 @@
 <p align="center">
     <a href="https://github.com/SmartMointy/LUNA"><img src="https://img.shields.io/badge/release-v0.4.0-blue"></a>
     <a href="https://www.php.net/ChangeLog-7.php#7.4.8"><img src="https://img.shields.io/badge/PHP-v7.4.8-green"></a>
-    <a href="https://github.com/SmartMointy/LUNA/blob/master/README.md#license"><img src="https://img.shields.io/badge/license-MIT-lightgrey"></a>
+    <a href="https://github.com/SmartMointy/LUNA/blob/master/LICENSE"><img src="https://img.shields.io/badge/license-MIT-lightgrey"></a>
 </p>
 
 <br />
