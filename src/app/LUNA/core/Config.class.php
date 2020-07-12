@@ -1,4 +1,4 @@
-<?php
+<?php namespace LUNA\core;
 
 // Config class is to get default configs with the get method that can be changed with the set or add method.
 

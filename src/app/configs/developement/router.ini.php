@@ -5,8 +5,4 @@
 
 return array(
       'home' => 'startseite, home, anasayfa',
-      'auth/login' => 'anmelden, login, giris',
-      'auth/register' => 'registrieren, register, kayit',
-      'auth/logout' => 'abmelden, loggout',
-      'captcha' => 'captcha'
    );

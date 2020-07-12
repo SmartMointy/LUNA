@@ -1,9 +1,7 @@
-<?php
-    // Just printing the headline and username if passed in
-    echo "<h2>" . $data['headline'] . "</h2>";
-
-    if ($data['username']) {
-        echo 'Your name is: ' . $data['username'];
-    } else {
-        echo "You didn't typed in a name like localhost/home/yourname";
-    }
+<div class="centered">
+    <img src="/assets/images/Logo.svg" height="70%" width="80%" alt="LUNA_Logo">
+    <h2><?=$data['headline'];?></h2>
+    <p>
+        This is the 'index' method in the 'home' controller.
+    </p>
+</div>

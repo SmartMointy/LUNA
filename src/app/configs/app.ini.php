@@ -3,7 +3,7 @@
 //main config file
 
 return array(
-    'name' => 'Application Name',
+    'name' => 'LUNA',
     'theme_color' => '#ffffff',
     'icons' => [
         'default' => 'default_icon_path',

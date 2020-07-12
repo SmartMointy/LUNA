@@ -2,12 +2,12 @@
 
 class LUNA
 {
-    private function __construct()
+    public function __construct()
     {
         self::init();
     }
 
-    private function run()
+    public function run()
     {
         // dispatch/route
         new Router;
@@ -15,12 +15,6 @@ class LUNA
 
     private function init()
     {
-        // Define standard path
-        define('ROOT', dirname(__FILE__) . '/..');
-
-        // register autoloader
-        self::autoload();
-
         // Error configuration
         if (Config::get('app/mode') === 'developement') {
             error_reporting(E_ALL);
@@ -53,10 +47,4 @@ class LUNA
             }
         }
     } 
-
-    private function autoload()
-    {
-        spl_autoload_extensions(".php"); // comma-separated list
-        spl_autoload_register();
-    }
 }

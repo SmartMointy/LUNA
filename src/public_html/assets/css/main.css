@@ -1,3 +1,15 @@
 body {
     margin: 0;
+    background-color: #fafcff;
+    font-family: sans-serif;
+    color: #044a86;
+}
+
+.centered {
+    width: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }

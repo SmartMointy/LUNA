@@ -17,9 +17,6 @@ class Router
             header('Location: ' . Language::Message('MENU_HOME'));
         }
 
-        //put hole url in session for login redirect
-        Session::put(Config::get('app/session_last_viewed'), implode('/', $url));
-
         // get all posible routes (in all languages) for one route and check if it contains the value of url
         foreach (Config::get('router') as $route => $value) {
             //if the controller contains the typed in url then take the value of the translated_controller
@@ -28,8 +25,6 @@ class Router
 
                 $con_met = explode('/', $route);
                 $this->controller = ucfirst($con_met[0]);
-
-                require_once ROOT . '/app/controllers/' . $this->controller . '.controller.php';
 
                 // Check if the url accessed has a default method (e.g. 'http://localhost/login' => 'auth/login', controller/method)
                 if (isset($con_met[1])) {
@@ -46,29 +41,31 @@ class Router
                 break; // stops the loop if the url is found
             }
         }
-        
-        // get Controller object
-        $this->controller = new $this->controller;
+
+        $path = ROOT . '/app/controllers/' . $this->controller . '.controller.php';
+
+        if (file_exists($path)) {
+            require_once $path;
+        }
 
         $this->params = $url ? array_values($url) : [];
 
         //Get method details
-        $reflection = new ReflectionMethod($this->controller, $this->method);
+        $reflection = new \ReflectionMethod($this->controller, $this->method);
 
         //Check if too much or too less arguments are passed, if so load errors controller and show 404
-        if (count($this->params) > $reflection->getNumberOfParameters() || count($this->params) < $reflection->getNumberOfRequiredParameters()) {
-            $this->controller = 'errors';
+        if ($this->controller === 'Errors' || count($this->params) > $reflection->getNumberOfParameters() || count($this->params) < $reflection->getNumberOfRequiredParameters()) {
+            $this->controller = 'Errors';
             $this->method = 'pageNotFound';
             $this->params = [];
 
-            require ROOT . '/app/controllers/' . $this->controller . '.controller.php';
-        
-            // get Controller object
-            $this->controller = new $this->controller;
+            if (!class_exists($this->controller)) {
+                require_once ROOT . '/app/controllers/' . $this->controller . '.controller.php';
+            }
         }
 
         //call method in controller
-        call_user_func_array([$this->controller, $this->method], $this->params);
+        call_user_func_array([new $this->controller, $this->method], $this->params);
     }
     
     public function parseURL()

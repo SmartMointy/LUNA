@@ -1,8 +1,10 @@
 <?php
 
+use LUNA\core\Controller;
+
 // this controller is called when the url contains a path that doesn't exists
 
-class errors extends Controller
+class Errors extends Controller
 {
 
     public function index()
@@ -13,8 +15,15 @@ class errors extends Controller
 
     public function pageNotFound()
     {
+        $this->view('layout/overall_top');
         $this->view('errors/page_not_found');
+        $this->view('layout/overall_bottom');
+    }
+
+    public function accessForbidden()
+    {
+        $this->view('layout/overall_top');
+        $this->view('errors/page_access_forbidden');
+        $this->view('layout/overall_bottom');
     }
 }
-
-?>

@@ -4,18 +4,17 @@ class Controller
 {
     protected function model($model)
     {
-        require ROOT . '/app/models/' . $model . '.model.php';
+        require_once ROOT . '/app/models/' . $model . '.model.php';
         return new $model;
     }
 
     protected function view($view, $data = [])
     {
-        require ROOT . '/app/views/' . $view . '.view.php';
+        require_once ROOT . '/app/views/' . $view . '.view.php';
     }
 
-    protected function helper($helper){
-
-        include ROOT . '/app/LUNA/helpers/' . $helper . '.helper.php';
-
+    protected function helper($helper)
+    {
+        require_once ROOT . '/app/LUNA/helpers/' . $helper . '.helper.php';
     }
 }
