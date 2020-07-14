@@ -7,20 +7,20 @@ use LUNA\core\Controller;
 class Errors extends Controller
 {
 
-    public function index()
+    public function index() : void
     {      
         // Will be removed
         echo "Uknown error occurred!";
     }
 
-    public function pageNotFound()
+    public function pageNotFound() : void
     {
         $this->view('layout/overall_top');
         $this->view('errors/page_not_found');
         $this->view('layout/overall_bottom');
     }
 
-    public function accessForbidden()
+    public function accessForbidden() : void
     {
         $this->view('layout/overall_top');
         $this->view('errors/page_access_forbidden');

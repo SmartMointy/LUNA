@@ -7,10 +7,10 @@ class Input
         switch($type)
         {
             case 'post':
-                return (!empty($_POST)) ? true : false;
+                return !empty($_POST);
             break;
             case 'get':
-                return (!empty($_GET)) ? true : false;
+                return !empty($_GET);
             break;
             default:
                 return false;
@@ -25,10 +25,10 @@ class Input
         if(isset($_POST[$item]))
         {
             // return input
-            return escape($_POST[$item]);
+            return self::escape($_POST[$item]);
         } else if(isset($_GET[$item])) {
             // same for GET method
-            return escape($_GET[$item]);
+            return self::escape($_GET[$item]);
         }
 
         // else return empty string

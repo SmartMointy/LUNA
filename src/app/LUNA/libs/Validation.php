@@ -1,25 +1,28 @@
 <?php namespace LUNA\libs;
 
+use LUNA\core\DB;
+use LUNA\core\Language;
+
 class Validate
 {
-    private $_passed = false;
-    private $_errors = array();
-    private $_items = array();
-    private $_db;
+    private bool $_passed = false;
+    private array $_errors = [];
+    private array $_items = [];
+    private DB $_db;
 
     public function __construct($file)
     {
         $this->_db = DB::getInstance();
 
-        $path = ROOT . '/app/validation/' . $file . '.val.php';
+        $path = ROOT . 'app' . DS . 'validation' . DS . $file . '.val.php';
 
         if (!empty($file) && file_exists($path)) {
             // get the array with the validation settings
-            $this->_items = require $path;
+            $this->_items = require_once $path;
         }
     }
 
-    public function check($source)
+    public function check($source) : Validate
     {
         if (empty($this->_items)) {
             $this->_passed = false;
@@ -50,7 +53,7 @@ class Validate
                             }
                         break;
                         case 'unique':
-                            $check = $this->_db->get($rule_value, array($item, '=', $value));
+                            $check = $this->_db->get($rule_value, $item,array($item, '=', $value));
                             if ($check->count()) {
                                 $this->addError(104, $item);
                             }
@@ -73,7 +76,7 @@ class Validate
         return $this;
     }
 
-    private function addError($err_code, $item)
+    private function addError(int $err_code, string $item) : void
     {
         $item = strtoupper($item);
         
@@ -102,12 +105,12 @@ class Validate
         }
     }
 
-    public function errors()
+    public function errors() : array
     {
         return $this->_errors;
     }
     
-    public function passed()
+    public function passed() : bool
     {
         return $this->_passed;
     }

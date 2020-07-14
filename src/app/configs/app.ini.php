@@ -19,6 +19,8 @@ return array(
         'msvalidate.01' => 'XXXX-XXXX-XXXX',
         'wot-verification' => 'XXXX-XXXX-XXXX'
     ],
-    'session_last_viewed' => 'page',
-    'captcha' => 'captcha_text'
+    'redirect_empty_url' => [
+        'mode' => true,
+        'to' => 'MENU_HOME'
+    ]
     );
