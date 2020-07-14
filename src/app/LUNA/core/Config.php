@@ -84,7 +84,7 @@ class Config
             $GLOBALS[self::CONFIG_KEY] = [];
 
             // Load main config file
-            $GLOBALS[self::CONFIG_KEY]['app'] = require_once ROOT . 'app' . DS . 'configs' . DS . 'app' . '.ini.php';
+            $GLOBALS[self::CONFIG_KEY]['app'] = require_once ROOT . 'app' . DS . 'configs' . DS . 'app.ini.php';
         }
     }
 

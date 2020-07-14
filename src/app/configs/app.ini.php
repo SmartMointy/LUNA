@@ -10,7 +10,7 @@ return array(
         'safari' => 'safari_icon_path'
     ],
     'version' => '0.4.0',
-    'mode' => 'developement',
+    'mode' => 'development',
     'language' => 'de',
     'all_languages' => ['de', 'en', 'fr', 'tr'],
     'verification_tokens' => [

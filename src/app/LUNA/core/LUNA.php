@@ -4,7 +4,7 @@ class LUNA
 {
     public function __construct()
     {
-        // Sets the default language
+        // Sets error reporting on/off based on the configuration
         self::setErrorReporting(Config::get('app/mode'));
 
         // Sets the default language
@@ -49,7 +49,7 @@ class LUNA
     private static function setErrorReporting(string $mode) : void
     {
         // Error configuration
-        if ($mode === 'developement') {
+        if ($mode === 'development') {
             error_reporting(E_ALL);
             ini_set('display_errors', 1);
             ini_set('display_startup_errors', 1);
@@ -59,7 +59,7 @@ class LUNA
             ini_set('display_errors', 0);
             ini_set('display_startup_errors', 0);
             ini_set('html_errors', 1);
-            ini_set('log_errors', ROOT . '/app/logs/php_errors.log');
+            ini_set('log_errors', ROOT . 'app' . DS . 'logs' . DS . 'php_errors.log');
         }
     }
 }
