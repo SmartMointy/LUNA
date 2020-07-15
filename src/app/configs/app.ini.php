@@ -21,6 +21,6 @@ return array(
     ],
     'redirect_empty_url' => [
         'mode' => true,
-        'to' => 'MENU_HOME'
+        'to' => 'home/MENU_HOME'
     ]
     );

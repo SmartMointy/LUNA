@@ -26,7 +26,7 @@ class LUNA
     {
         if (empty($_GET['url'])) {
             if (Config::get('app/redirect_empty_url/mode') === true) {
-               header('Location: ' . DS . Language::Message(Config::get('app/redirect_empty_url/to')));
+               header('Location: ' . DS . Lang::get(Config::get('app/redirect_empty_url/to')));
             }
 
             $_GET['url'] =  Config::get('app/defaultPage');
