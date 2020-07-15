@@ -1,19 +1,6 @@
 <?php
-spl_autoload_register(function($class) { 
-    $request = explode('\\', $class);
+// Define standard path
+define('ROOT', dirname(__FILE__) . DIRECTORY_SEPARATOR .'..' . DIRECTORY_SEPARATOR . 'src' . DIRECTORY_SEPARATOR);
 
-    $class = __DIR__ . '/../src/app/' . implode(DIRECTORY_SEPARATOR, $request) . '.class.php';
-    $controller = __DIR__ . '/../src/app/' . implode(DIRECTORY_SEPARATOR, $request) . '.controller.php';
-    $model = __DIR__ . '/../src/app/' . implode(DIRECTORY_SEPARATOR, $request) . '.model.php';
-    $helper = __DIR__ . '/../src/app/' . implode(DIRECTORY_SEPARATOR, $request) . '.helper.php';
-
-    if (file_exists($class)) {
-        require_once($class);
-    } elseif (file_exists($controller)) {
-        require_once($controller);
-    } elseif (file_exists($model)) {
-        require_once($model);
-    } elseif (file_exists($helper)) {
-        require_once($helper);
-    }
-});
+// Require bootstrap file
+require_once ROOT . 'app' . DIRECTORY_SEPARATOR . 'LUNA' . DIRECTORY_SEPARATOR . 'bootstrap.php';

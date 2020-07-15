@@ -2,14 +2,8 @@
 
 use LUNA\core\LUNA;
 
-// Define directory separator
-define('DS', DIRECTORY_SEPARATOR);
-
-// Define standard path
-define('ROOT', dirname(__FILE__) . DS .'..' . DS);
-
-// Require bootstrap
-require_once ROOT . 'app' . DS . 'LUNA' . DS . 'bootstrap.php';
+// Require bootstrap file
+require_once dirname(__FILE__) . DIRECTORY_SEPARATOR . '..' . DIRECTORY_SEPARATOR . 'app' . DIRECTORY_SEPARATOR . 'LUNA' . DIRECTORY_SEPARATOR . 'bootstrap.php';
 
 // Create App
 $App = new LUNA();
