@@ -8,6 +8,8 @@ class Router
 
     private string $method = 'pageNotFound';
 
+    private string $lang;
+
     /*
      * [controller] or [controller, method]
      */
@@ -54,22 +56,29 @@ class Router
         // The default controller if nothing is found
         $controller = $this->controller;
 
+        $possibleController = strtolower($url[0]);
+
         // Get all posible routes (in all languages) for one route and check if it contains the value of url
-        foreach (Config::get('router') as $route => $value) {
+        foreach (Config::get('router') as $language => $routes) {
+
             // If the controller contains the typed in url then take the value of the translated_controller
-            if (stripos($value, $url[0]) !== false) {
-
-                $this->route = explode('/', $route);
-
-                // Return controller name with uc first character
-                $controller = ucfirst($this->route[0]);
-
-                // Remove controller from url
-                unset($this->URL[1]);
-
-                // Stop when url is found
-                break;
+            if (!array_key_exists($possibleController, $routes)) {
+                continue;
             }
+
+            $this->route = explode('/', $routes[$possibleController]);
+
+            // Return controller name with uc first character
+            $controller = ucfirst($this->route[0]);
+
+            // Remove controller from url
+            unset($this->URL[0]);
+
+            // Language by url
+            $this->setLanguage($language);
+
+            // Stop when url is found
+            break;
         }
 
         return $controller;
@@ -118,5 +127,15 @@ class Router
     private function parseURL(string $url) : array
     {
         return $url = explode('/', rtrim($url, '/'));
+    }
+
+    public function setLanguage(string $language)
+    {
+        $this->lang = $language;
+    }
+
+    public function getLanguage()
+    {
+        return $this->lang;
     }
 }

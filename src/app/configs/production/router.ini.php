@@ -4,5 +4,10 @@
 // Will be used to support multiple languages, so that "home", as well as "startseite", wich is home in germany, will call the home-controller
 
 return array(
-      'home' => 'startseite, home, anasayfa',
-   );
+    'de' => [
+        'startseite' => 'home',
+    ],
+    'en' => [
+        'home' => 'home',
+    ],
+);

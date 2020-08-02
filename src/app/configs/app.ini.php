@@ -12,7 +12,7 @@ return array(
     'version' => '0.4.0',
     'mode' => 'development',
     'language' => 'de',
-    'all_languages' => ['de', 'en', 'fr', 'tr'],
+    'all_languages' => ['de', 'en'],
     'verification_tokens' => [
         'google-site-verification' => 'XXXX-XXXX-XXXX',
         'yandex-verification' => 'XXXX-XXXX-XXXX',
