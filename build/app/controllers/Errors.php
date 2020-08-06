@@ -15,6 +15,8 @@ class Errors extends Controller
 
     public function page_not_found() : void
     {
+        http_response_code(404);
+
         $this->view('layout/overall_top');
         $this->view('errors/page_not_found');
         $this->view('layout/overall_bottom');
@@ -22,6 +24,8 @@ class Errors extends Controller
 
     public function access_forbidden() : void
     {
+        http_response_code(403);
+
         $this->view('layout/overall_top');
         $this->view('errors/page_access_forbidden');
         $this->view('layout/overall_bottom');

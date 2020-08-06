@@ -1,5 +1,7 @@
 <?php namespace LUNA\core;
 
+use Error;
+
 class Lang
 {
     const LANG_KEY = 'lang';
@@ -27,7 +29,14 @@ class Lang
 
     private static function loadLangFile(string $filename): void
     {
-        $GLOBALS[self::LANG_KEY][$filename] = require_once ROOT . APP_DIRNAME . DS . 'lang' . DS . Config::get('app/language') . DS . $filename . '.lang.php';
+        $path = ROOT . APP_DIRNAME . DS . 'lang' . DS . Config::get('app/language') . DS . $filename . '.lang.php';
+
+        if (file_exists($path)) {
+            $GLOBALS[self::LANG_KEY][$filename] = require_once $path;
+        } else {
+            trigger_error( 'Tried to load lang file that doesn\'t exist!', E_USER_NOTICE);
+            $GLOBALS[self::LANG_KEY][$filename] = [];
+        }
     }
 
     private static function isLangFileLoaded(string $filename): bool
