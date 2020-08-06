@@ -13,14 +13,14 @@ class Errors extends Controller
         echo "Unknown error occurred!";
     }
 
-    public function pageNotFound() : void
+    public function page_not_found() : void
     {
         $this->view('layout/overall_top');
         $this->view('errors/page_not_found');
         $this->view('layout/overall_bottom');
     }
 
-    public function accessForbidden() : void
+    public function access_forbidden() : void
     {
         $this->view('layout/overall_top');
         $this->view('errors/page_access_forbidden');

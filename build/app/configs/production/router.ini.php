@@ -11,6 +11,7 @@ return array(
 
     'de' => [
         'startseite' => 'home',
+        'error' => 'errors',
     ],
 
     /*
@@ -19,5 +20,7 @@ return array(
 
     'en' => [
         'home' => 'home',
+        'error' => 'errors',
     ],
 );
+

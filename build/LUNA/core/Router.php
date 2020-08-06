@@ -1,12 +1,14 @@
 <?php declare(strict_types=1); namespace LUNA\core;
 
+use Error;
+
 class Router
 {
     private array $URL;
 
     private string $controller = 'Errors';
 
-    private string $method = 'pageNotFound';
+    private string $method = 'page_not_found';
 
     private string $lang = '';
 
@@ -23,12 +25,9 @@ class Router
 
         $this->controller = $this->getControllerByURL($this->URL);
 
-        // Check if controller was found
-        if ($this->controller !== 'Errors') {
-            $this->method = $this->getMethodByURL($this->URL);
+        $this->method = $this->getMethodByURL($this->URL);
 
-            $this->params = $this->getParamsByURL($this->URL);
-        }
+        $this->params = $this->getParamsByURL($this->URL);
 
         //Check if too much or too less arguments are passed, if so load errors controller and show 404
         if ($this->checkParamCount()) {
@@ -109,7 +108,11 @@ class Router
     private function checkParamCount() : bool
     {
         //Get method details
-        $reflection = new \ReflectionMethod(APP_DIRNAME . "\\controllers\\" . $this->controller, $this->method);
+        try {
+            $reflection = new \ReflectionMethod(APP_DIRNAME . "\\controllers\\" . $this->controller, $this->method);
+        } catch (\ReflectionException $e) {
+            throw new Error('Unable to reflect class method!');
+        }
 
         return count($this->params) > $reflection->getNumberOfParameters() || count($this->params) < $reflection->getNumberOfRequiredParameters();
     }

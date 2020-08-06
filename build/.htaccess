@@ -27,7 +27,8 @@ RewriteRule ^(.*)$ public/$1 [L]
 # Custom error messages/pages
 # ----------------------------------------------------------------------
 
-ErrorDocument 404 /404.html
+ErrorDocument 403 /error/access_forbidden
+ErrorDocument 404 /error/page_not_found
 
 
 # INTERNET EXPLORER
