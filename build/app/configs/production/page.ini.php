@@ -7,12 +7,11 @@ return array(
     'description' => 'The default description in production',
     'keywords' => 'The default keywords in production',
     'css' => array(
-            'main'
-        ),
+        'main',
+    ),
     'js' => array(
-            'main',
-            'sw'
-        ),
+        'main',
+    ),
     'author' => 'The default author',
     'custom_head_elements' => [
         ['meta', 'name', 'referrer', 'content', 'no-referrer'],
