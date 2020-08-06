@@ -8,7 +8,7 @@ class Lang
 
     public static function get(string $messagePath = '', array $data = []) : string
     {
-        $messagePath = explode('/', $messagePath);
+        $messagePath = explode('/', strtolower($messagePath));
 
         if (!self::isLangFileLoaded($messagePath[0])) {
             self::loadLangFile($messagePath[0]);
