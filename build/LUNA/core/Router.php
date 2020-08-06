@@ -32,7 +32,7 @@ class Router
         //Check if too much or too less arguments are passed, if so load errors controller and show 404
         if ($this->checkParamCount()) {
             $this->controller = 'Errors';
-            $this->method = 'pageNotFound';
+            $this->method = 'page_not_found';
             $this->params = [];
         }
     }

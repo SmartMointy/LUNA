@@ -20,4 +20,4 @@ return array(
     ],
     'navbar' => true,
     'footer' => true
-   );
+);

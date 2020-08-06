@@ -11,4 +11,4 @@ return array(
     'max_login_attempts_DID' => 5,
     'captcha_attempts' => 4,
     'block_user' => 'PT15M'
-    );
+);

@@ -10,4 +10,4 @@ return array(
     'password' => 'supersecurepassword',
     'port' => 25,
     'html' => true
-   );
+);

@@ -12,4 +12,4 @@ return array(
     'captcha_attempts' => 10,
     'block_user' => 'PT15M',
     'login_Data' => 'user_login_data'
-    );
+);
