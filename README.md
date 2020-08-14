@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/SmartMointy/LUNA">
     <img src="https://raw.githubusercontent.com/SmartMointy/small-mvc-framework/master/src/public_html/assets/images/Logo.svg" alt="Logo" width="300" height="300">
   </a>
     
